@@ -1,0 +1,37 @@
+ <ul className='d-flex align-items-center'>
+              {user ?
+
+                <>
+
+                  <li><Link to="/home">Home</Link></li>
+                  <li><Link to="/myTrip">My Trip</Link></li>
+                  <li><Link to="/upload">upload</Link></li>
+                  <li><Link to="/about">About Us</Link></li>
+                  <li><Link to="/contact">Contact Us</Link></li>
+
+                </> :
+                <>
+                  <li><Link to="/logIn">LogIn</Link></li>
+                  <li><Link to="/signUp">SignUp</Link></li>
+                  <li><Link to="/home">Home</Link></li>
+                  <li><Link to="/about">About Us</Link></li>
+                  <li><Link to="/contact">Contact Us</Link></li>
+                </>
+
+              }
+
+            </ul>
+           
+
+
+
+
+
+   <div>
+                {user && <h3>hello {user.name}</h3>}
+              </div>
+              <div>
+                {user &&
+                  <button onClick={logout} className='btn btn-danger '>logout</button>
+                }
+              </div>
