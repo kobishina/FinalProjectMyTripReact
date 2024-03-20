@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { MyContext } from '../context/myContext'
 import { KEY_TOKEN } from '../constant/constants'
 import "./header.css"
@@ -12,6 +12,15 @@ export default function Header({ type }) {
   const { user, setUser } = useContext(MyContext)
   const [openNav, setOpenNav] = useState(false)
   const nav = useNavigate()
+
+  const location = useLocation()
+
+  // Add this useEffect hook to close the navigation menu when route changes
+  useEffect(() => {
+    setOpenNav(false); // Close navigation menu when route changes
+  }, [location.pathname]); // Run this effect whenever the pathname changes
+
+
   const logout = () => {
     setUser(null)
     localStorage.removeItem(KEY_TOKEN)

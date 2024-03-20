@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { MyContext } from '../context/myContext';
 import { doApiMethod } from '../services/apiServices';
 import { useForm } from 'react-hook-form';
+import { API_URL } from '../constant/urls';
 
 export default function LogInPage() {
   const [email, setEmail] = useState("");
@@ -20,7 +21,7 @@ export default function LogInPage() {
     try {
       // console.error(new Error("wrong"));
 
-      let result = await doApiMethod("http://localhost:3002/users/login", "POST", { email, password })
+      let result = await doApiMethod(API_URL + "/users/login", "POST", { email, password })
 
       // let statuse = result.response.status;
       // if (statuse === 401) return setErr(result.response.data);

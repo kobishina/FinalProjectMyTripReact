@@ -1,4 +1,5 @@
-export const API_URL = "http://localhost:3002";
+export const API_URL = "https://finalprojectmytrip.onrender.com";
+//http://localhost:3002
 
 // const LOGIN_ROUTE = MAIN_ROUTE + "logIn"
 // const SIGNUP_ROUTE = MAIN_ROUTE + "signUp"

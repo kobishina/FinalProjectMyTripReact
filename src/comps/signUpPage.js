@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { API_URL } from '../constant/urls';
 
 export default function SignUpPage() {
     const { register, getValues, handleSubmit, formState: { errors } } = useForm();
@@ -17,7 +18,7 @@ export default function SignUpPage() {
         console.log(_bodyData);
     }
     const doApiPostNewUser = async (_bodyData) => {
-        let myUrl = "http://localhost:3002/users";
+        let myUrl = API_URL + "/users";
         try {
             let resp = await axios({
                 method: "POST",

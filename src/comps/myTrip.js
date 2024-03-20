@@ -131,12 +131,12 @@ export default function MyTrip() {
           </div>
 
         </div>
-        <div className='text-center mt-3'>
+        <div className='text-center mt-3 '>
           <h4>Maps</h4>
           <iframe
-            className='rounded'
+            className='rounded col-lg-6 col-md-8 col-sm-10'
             title="Google Maps"
-            width="70%"
+            width="100%"
             height="450"
             loading="lazy"
             allowFullScreen

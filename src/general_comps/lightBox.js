@@ -62,7 +62,7 @@ const LightBox = () => {
                             src={imageSrc}
                             alt={imageAlt}
                             style={{
-                                width: '400px',
+                                width: '300px',
                                 height: '500px',
                                 maxWidth: '100vw', // Ensure image fits within viewport width
                                 maxHeight: '100vh', // Ensure image fits within viewport height
