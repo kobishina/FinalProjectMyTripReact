@@ -69,27 +69,27 @@ export default function AddInfoUser({ sParams, defaultCountry, dataTown, getData
             <h3 className='text-center mt-4'>Edit Info For {defaultCountry}</h3>
 
             <div className='d-flex justify-content-center '>
-                {
-                    dataTown &&
+                {/* {
+                    dataTown && */}
 
-                    <form key={dataTown.town_name} className='col-md-6 p-2  border border-1 rounded' onSubmit={updateInfo} id="id_form">
-                        <label>Country Name</label>
-                        <input disabled value={defaultCountry} className="form-control" type="text" />
-                        <label>town_name</label><br />
-                        <input ref={townNameInput} key={dataTown.town_name} defaultValue={dataTown ? dataTown.town_name : ""} className="form-control" type="text" />
-                        {/* {errors.town_name && <div className="text-danger">* Enter valid town_name</div>}<br /> */}
-                        <label>town_info</label>
-                        {/* {...register("town_info", { required: true, minLength: 2 })} */}
-                        <input ref={townInfoInput} key={dataTown.town_info} defaultValue={dataTown ? dataTown.town_info : ""} className="form-control" type="text" />
-                        {/* {errors.town_info && <div className="text-danger">* Enter valid town_info</div>}<br /> */}
+                <form key={dataTown?.town_name} className='col-md-6 p-2  border border-1 rounded' onSubmit={updateInfo} id="id_form">
+                    <label>Country Name</label>
+                    <input disabled value={defaultCountry} className="form-control" type="text" />
+                    <label>town_name</label><br />
+                    <input ref={townNameInput} key={dataTown?.town_name} defaultValue={dataTown ? dataTown?.town_name : ""} className="form-control" type="text" />
+                    {/* {errors.town_name && <div className="text-danger">* Enter valid town_name</div>}<br /> */}
+                    <label>town_info</label>
+                    {/* {...register("town_info", { required: true, minLength: 2 })} */}
+                    <input ref={townInfoInput} key={dataTown?.town_info} defaultValue={dataTown ? dataTown?.town_info : ""} className="form-control" type="text" />
+                    {/* {errors.town_info && <div className="text-danger">* Enter valid town_info</div>}<br /> */}
 
 
 
-                        <div className='d-flex justify-content-center'>
-                            <button type='submit' className='btn btn-success mt-4'>Update Info</button>
-                        </div>
-                    </form>
-                }
+                    <div className='d-flex justify-content-center'>
+                        <button type='submit' className='btn btn-success mt-4'>Update Info</button>
+                    </div>
+                </form>
+                {/* } */}
             </div>
         </div>
     )

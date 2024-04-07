@@ -13,6 +13,9 @@ export default function Header({ type }) {
   const [openNav, setOpenNav] = useState(false)
   const nav = useNavigate()
 
+  useEffect(() => {
+    console.log("user", user);
+  }, [user])
   const location = useLocation()
 
   // Add this useEffect hook to close the navigation menu when route changes
@@ -81,13 +84,17 @@ export default function Header({ type }) {
         <GiHamburgerMenu onClick={() => setOpenNav(!openNav)} size={24} className='bur d-none' />
         <div className='content  d-flex justify-content-between'>
           <div className={`links-and-logo d-flex align-items-center ${openNav && "openNav"}`}>
-            {user && <h3>Hello  {user.name} Admin </h3>}
-            <ul className='ul-links d-flex align-items-center'>
-              <li className='li_links'><Link to="/admin/users">Users</Link></li>
-              <li className='li_links'><Link to="/admin/places">Places</Link></li>
-              <li className='li_links'><Link to="/admin/towns">Towens</Link></li>
-              {/* <li className='li_links'><Link to="/admin/trips">Trips</Link></li> */}
-            </ul>
+            {user &&
+              <>
+                <h3>Hello  {user.name} Admin </h3>
+                <ul className='ul-links d-flex align-items-center'>
+                  <li className='li_links'><Link to="/admin/users">Users</Link></li>
+                  <li className='li_links'><Link to="/admin/places">Places</Link></li>
+                  <li className='li_links'><Link to="/admin/towns">Towens</Link></li>
+                  {/* <li className='li_links'><Link to="/admin/trips">Trips</Link></li> */}
+                </ul>
+              </>
+            }
           </div>
 
           <div className={`name-and-logout d-flex ${openNav && "openNav"}`}>

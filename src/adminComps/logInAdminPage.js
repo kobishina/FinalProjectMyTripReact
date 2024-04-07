@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { KEY_TOKEN } from '../constant/constants';
 import { API_URL } from '../constant/urls';
 import { doApiMethod } from '../services/apiServices';
+import { MyContext } from '../context/myContext';
 
 export default function LogInAdminPage() {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const { checkIfUserConnect } = useContext(MyContext)
     const nav = useNavigate();
     const [errMsg, setErrMsg] = useState('');
 
@@ -20,8 +22,10 @@ export default function LogInAdminPage() {
         try {
             const data = await doApiMethod(url, "POST", _bodyData);
             if (data.token && data.role === "admin") {
-                console.log(data);
+
+
                 localStorage.setItem(KEY_TOKEN, data.token);
+                await checkIfUserConnect()
                 nav("/admin/users");
                 toast.success("Loged In Succsess!")
             } else {

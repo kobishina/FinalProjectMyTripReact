@@ -40,7 +40,7 @@ function App() {
 
   return (
 
-    <MyContext.Provider value={{ updateUser, user, setUser }}>
+    <MyContext.Provider value={{ updateUser, user, setUser, checkIfUserConnect }}>
       <div className="App">
         <AppRoutes />
         { /* adding that library and import the css library of tostify*/}
