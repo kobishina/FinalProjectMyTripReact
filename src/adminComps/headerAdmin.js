@@ -20,7 +20,7 @@ export default function HeaderAdmin() {
                             <li><Link to="/admin/users">Users</Link></li>
                             <li><Link to="/admin/places">Places</Link></li>
                             <li><Link to="/admin/towns">Towens</Link></li>
-                            <li><Link to="/admin/trips">Trips</Link></li>
+                            {/* <li><Link to="/admin/trips">Trips</Link></li> */}
                         </ul>
                         <div className='col-auto'>
                             {localStorage[KEY_TOKEN] ?

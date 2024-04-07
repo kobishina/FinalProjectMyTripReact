@@ -81,12 +81,12 @@ export default function Header({ type }) {
         <GiHamburgerMenu onClick={() => setOpenNav(!openNav)} size={24} className='bur d-none' />
         <div className='content  d-flex justify-content-between'>
           <div className={`links-and-logo d-flex align-items-center ${openNav && "openNav"}`}>
-            {user && <h2>Hello Admin {user.name}</h2>}
+            {user && <h3>Hello  {user.name} Admin </h3>}
             <ul className='ul-links d-flex align-items-center'>
               <li className='li_links'><Link to="/admin/users">Users</Link></li>
               <li className='li_links'><Link to="/admin/places">Places</Link></li>
               <li className='li_links'><Link to="/admin/towns">Towens</Link></li>
-              <li className='li_links'><Link to="/admin/trips">Trips</Link></li>
+              {/* <li className='li_links'><Link to="/admin/trips">Trips</Link></li> */}
             </ul>
           </div>
 

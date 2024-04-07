@@ -29,32 +29,34 @@ export default function UsersListAdminPage() {
     }
 
     return (
-        <div className='container pt-4'>
+        <div className='container pt-4 '>
             <AuthAdminComp />
             <h2 className='text-center'>Table Of Users</h2>
             {/* ToDo pagesNav */}
             <PagesNav apiCount="http://localhost:3002/users/count" linkTo="/admin/users?page=" css=" btn btn-dark me-2 " />
 
-            <table className='table table-striped'>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Date_created</th>
-                        <th>Role</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {arr.map((item, i) => {
+            <div className='table-responsive'>
+                <table className='table table-striped'>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Date_created</th>
+                            <th>Role</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {arr.map((item, i) => {
 
-                        return (
-                            <UserTableRow key={item._id} index={i} item={item} setArr={setArr} />
-                        )
-                    })}
-                </tbody>
-            </table>
+                            return (
+                                <UserTableRow key={item._id} index={i} item={item} setArr={setArr} />
+                            )
+                        })}
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

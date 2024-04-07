@@ -37,7 +37,7 @@ export default function TownsListAdminPage() {
         }
     }
     return (
-        <div className='container pt-4'>
+        <div className='container pt-4 table-responsive'>
             <AuthAdminComp />
             <h2 className='text-center'>List Of Towns</h2>
 
@@ -69,7 +69,7 @@ export default function TownsListAdminPage() {
                                 <td>{item.date_created.substring(0, 10)}</td>
 
                                 <td>
-                                    <button className='bg-danger' onClick={() => {
+                                    <button className=' ms-2 bg-danger col-9 col-md-2 text-center ' onClick={() => {
                                         window.confirm("are you sure?") &&
                                             doApiDelete(item._id)
                                     }}>X</button>

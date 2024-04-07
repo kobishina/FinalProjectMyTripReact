@@ -39,7 +39,7 @@ export default function PlacesListAdminPage() {
         }
     }
     return (
-        <div className='container pt-4'>
+        <div className='container pt-4  table-responsive'>
             <AuthAdminComp />
             <h2 className='text-center'>List Of Places</h2>
             <div className='d-flex justify-content-center m-4'  >
@@ -79,7 +79,7 @@ export default function PlacesListAdminPage() {
                                 <td>{item.date_created.substring(0, 10)}</td>
 
                                 <td>
-                                    <button className='bg-danger' onClick={() => {
+                                    <button className='bg-danger ms-2 col-10 col-md-3' onClick={() => {
                                         window.confirm("are you sure?") &&
                                             doApiDelete(item._id)
                                     }}>X</button>
