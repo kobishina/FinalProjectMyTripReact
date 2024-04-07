@@ -59,9 +59,9 @@ export default function SignUpPage() {
         }
     }
     return (
-        <div className='container'>
-            <h2 className='text-center'>signUp User</h2>
-            <div className='box d-flex align-item-center justify-content-center'>
+        <div className='container p-md-5 pt-4 '>
+            <h2 className='text-center h1Fount pb-3'>signUp User</h2>
+            <div className='box d-flex align-item-center justify-content-center p-4 m-4'>
                 <form className='col-md-6 p-2' onSubmit={handleSubmit(onSubForm)} id="id_form">
                     {/* Name */}
                     <label>Name</label>
@@ -97,9 +97,10 @@ export default function SignUpPage() {
                     <input {...register("password2", { required: true, validate: (val) => val === getValues("password") })} className="form-control" type="password" />
                     {errors.password2 && <div className="text-danger"> * Passwords Not match!</div>}
 
-                    <button className='btn btn-success'>submit</button>
+                    <button className='btn btn-success m-2'>submit</button>
                 </form>
             </div>
+            {/* </div> */}
         </div>
     )
 }

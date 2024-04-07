@@ -10,17 +10,19 @@ export default function About() {
 
     return (
         <div style={{
-            backgroundColor: "#380835",
+            // backgroundColor: "#380835",
             marginBottom: "-100px"
         }}>
             <main className="container-fluid">
                 <div className="container">
                     <div className="row text-center justify-content-center align-items-center ">
                         <h4 className="my-5">FAQ & About</h4>
-                        <div className="accordion text-center col-md-6 col-lg-8 shadow accordion-flush" id="accordionFlushExample">
+                        <div className="accordion text-center col-md-6 col-lg-8 shadow accordion-flush p-3 rounded-5 " id="accordionFlushExample">
+
+                            {/* <!-- end accordion 1 --> */}
                             <div className="accordion-item rounded-5 bg-warning">
-                                <h2 className="accordion-header rounded-5" id="flush-headingOne">
-                                    <button className="accordion-button collapsed  rounded-5" type="button"
+                                <h2 className="accordion-header rounded-5 " id="flush-headingOne">
+                                    <button className="accordion-button collapsed  rounded-5 m-1" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
                                         aria-controls="flush-collapseOne">
                                         Who We Are?
@@ -38,10 +40,10 @@ export default function About() {
                                     </div>
                                 </div>
                             </div>
-                            {/* <!-- end accordion 1 --> */}
+                            {/* <!-- end accordion 2 --> */}
                             <div className="accordion-item rounded-5 bg-warning">
-                                <h2 className="accordion-header rounded-5" id="flush-headingTwo">
-                                    <button className="accordion-button rounded-5 collapsed " type="button"
+                                <h2 className="accordion-header rounded-5 " id="flush-headingTwo">
+                                    <button className="accordion-button rounded-5 collapsed m-1" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
                                         aria-controls="flush-collapseTwo">
                                         Why Choose Us
@@ -63,10 +65,10 @@ export default function About() {
                                     </div>
                                 </div>
                             </div>
-                            {/* <!-- end accordion 2 --> */}
+                            {/* <!-- end accordion 3 --> */}
                             <div className="accordion-item rounded-5 bg-warning">
                                 <h2 className="accordion-header rounded-5 " id="flush-headingThree">
-                                    <button className="accordion-button collapsed rounded-5 " type="button"
+                                    <button className="accordion-button collapsed rounded-5 m-1" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
                                         aria-controls="flush-collapseThree">
                                         availability 24/7! Mean?
@@ -84,10 +86,10 @@ export default function About() {
                                     </div>
                                 </div>
                             </div>
-                            {/* <!-- end accordion 3 --> */}
+                            {/* <!-- end accordion 4 --> */}
                             <div className="accordion-item rounded-5 bg-warning">
                                 <h2 className="accordion-header rounded-5" id="flush-headingFour">
-                                    <button className="accordion-button collapsed  rounded-5" type="button"
+                                    <button className="accordion-button collapsed  rounded-5 m-1" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
                                         aria-controls="flush-collapseFour">
                                         What will you fine with us?
@@ -105,10 +107,10 @@ export default function About() {
                                     </div>
                                 </div>
                             </div>
-                            {/* <!-- end accordion --> */}
+                            {/* <!-- end accordion 5 --> */}
                             <div className="accordion-item rounded-5 bg-warning">
                                 <h2 className="accordion-header rounded-5" id="flush-headingFive">
-                                    <button className="accordion-button  rounded-5 collapsed " type="button"
+                                    <button className="accordion-button collapsed rounded-5 m-1" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false"
                                         aria-controls="flush-collapseFive">
                                         Are you Bussines?

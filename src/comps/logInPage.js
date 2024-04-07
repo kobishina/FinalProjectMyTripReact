@@ -43,25 +43,29 @@ export default function LogInPage() {
   }
   return (
 
-    <div className='container-fluid  pt-4' style={{ background: "#A0522D	" }}>
-      <h2 className='text-center'>login User</h2>
-      <div className='box d-flex align-item-center justify-content-center'>
-        <form className='col-md-6 p-2' onSubmit={handleSubmit} >
+    <div className='container-fluid p-md-5 pt-5 bg_home '>
+      <h2 className='text-center h1Fount'>login User</h2>
+      <div className='box d-flex align-item-center justify-content-center p-4 m-5'>
+        <form className='col-md-6 p-2 ' onSubmit={handleSubmit} >
 
           {/* email */}
-          <label>Email</label>
+
+          <label className='m-2' >Email</label>
           <input className="form-control" type="email" id="email" value={email} onChange={(event) => setEmail(event.target.value)} />
 
 
           {/* password */}
-          <label>password</label>
-          <input className="form-control" type="password" id="password" value={password} onChange={(event) => setPassword(event.target.value)} />
+          <label className='m-2' >password</label>
+          <input className="form-control " type="password" id="password" value={password} onChange={(event) => setPassword(event.target.value)} />
 
-          <button className='btn btn-danger ' type="submit">LogIn</button>
+          <button className='btn btn-danger m-2' type="submit">LogIn</button>
           {err && <h3 className='text-danger'>{err}</h3>}
 
         </form>
       </div>
     </div>
+
+
+
   )
 }

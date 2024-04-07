@@ -1,6 +1,8 @@
 /* global css */
+
+
 header {
-    background: purple;
+    background: rgba(66, 39, 73, 0.825);
     color: white;
 }
 
@@ -42,6 +44,14 @@ header ul a {
 .bg_home {
     background-color: rgb(99, 121, 121);
 }
+
+.bg_global{
+    background-Color: "#380835"
+}
+
+body {
+    background-color: rgb(113, 113, 119);
+  }
 
 .box_select {
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00, 2px 2px 2px rgba(206, 89, 55, 0);

@@ -16,7 +16,7 @@ export default function MyTrip() {
   const [borderBtn, setBorderBtn] = useState([]);
   const [dataTown, setDataTown] = useState();
 
-  //collect the name of the country from the url using the params Effectin for my DB
+  //איסוף שם המדינה מהפרמס
   const getDataTown = async () => {
     try {
       // let url = API_URL + `/towns/editInfo?name=${defaultCountry}`;
@@ -42,14 +42,12 @@ export default function MyTrip() {
     getCountry();
     getDataTown()
   }, [params])
-
-  //Using Api countrys
+// שימוש באיפי אי חיצוני מדינות ואנפיפורמציה עליהים 
   const getCountry = async () => {
     try {
       const { data } = await axios.get(`https://restcountries.com/v3.1/name/${Query}`);
       setCountryData(data[0]);
       console.log("getting country", data);
-      // repesent the countrys in ther fullName in share borders
       if (data[0].borders) {
         const { data: bordersData } = await axios.get('https://restcountries.com/v3.1/alpha?codes=' + data[0].borders)
         setBorderBtn(bordersData.map(b => b.name.common))
@@ -60,7 +58,9 @@ export default function MyTrip() {
     }
   }
 
-  //when click in the countryBorder will move to that country
+
+
+
   const handleBorderButtonClick = (borderName) => {
     nav("/myTrip?name=" + borderName)
     // Handle what you want to do with the data of the border country, such as displaying it in a modal or navigating to a new page
@@ -100,7 +100,8 @@ export default function MyTrip() {
             <h4>Language: {Object.values(countryData.languages) + "  "}</h4>
             <h4>Coin: {Object.keys(countryData.currencies) + " " + Object.values(countryData.currencies)[0].symbol + " (" + Object.values(countryData.currencies)[0].name + ")"}</h4>
             <h4>Capital: {countryData.capital}</h4>
-            {/* collect the details from my DB */}
+           
+            {/* שימוש בדאטה שלנו */}
             <div>
               <CountryInfoDB countryName={countryData.name.common} dataTown={dataTown} />
             </div>
@@ -125,16 +126,17 @@ export default function MyTrip() {
               )}
             </div>
           </div>
-
-          {/* wheather component using more API and take the name by props move here in the component */}
+          {/* שישמוש באיפיאי ערים ומזג אוויר  */}
           <div className='border border-1 rounded p-3'>
             <WeatherComponent defaultCountry={params.get("name")} />
           </div>
 
         </div>
+
+        {/* הפניה למפות מאיפיאי חיצוני אינפורמציה */}
         <div className='text-center mt-3 '>
           <h4>Maps</h4>
-          <iframe
+          <iframe 
             className='rounded col-lg-6 col-md-8 col-sm-10'
             title="Google Maps"
             width="100%"
@@ -144,12 +146,10 @@ export default function MyTrip() {
             src={`https://maps.google.com/maps?q=${countryData.latlng[0]},${countryData.latlng[1]}&z=5&ie=UTF8&iwloc=&output=embed`}
           ></iframe>
 
-          {/* Add Info User to the DB move the data by props  */}
           <AddInfoUser sParams={params} defaultCountry={params.get("name")} dataTown={dataTown} getDataTown={getDataTown} />
         </div>
       </>}
 
-      {/* my list for travel saving LocalStorage */}
       <div className=''>
         <TravelList />
       </div>

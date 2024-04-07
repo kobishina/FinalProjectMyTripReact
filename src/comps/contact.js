@@ -14,14 +14,14 @@ import LightBox from '../general_comps/lightBox';
 export default function Contact() {
     return (
         <main className='container-fluid' style={{
-            backgroundColor: "#894585",
+            // backgroundColor: "#380835",
             marginBottom: "-100px"
         }}>
             <h4 className="text-center pt-4" id='h4_font'>Contact Us & Gallery</h4>
             <div className='container'>
                 <div className="history">
                     <h3 className="text-center m-5">Our History & why Do You need Us</h3>
-                    <p className="p_history">Travel agent companies have a rich and storied history that spans centuries, evolving alongside the development of transportation, technology, and global tourism. Originating in the 19th century, travel agencies emerged as intermediaries between travelers and transportation providers, facilitating organized journeys and offering comprehensive travel services.
+                    <p className="p_history rounded-1">Travel agent companies have a rich and storied history that spans centuries, evolving alongside the development of transportation, technology, and global tourism. Originating in the 19th century, travel agencies emerged as intermediaries between travelers and transportation providers, facilitating organized journeys and offering comprehensive travel services.
 
                         The roots of modern travel agencies can be traced back to the mid-1800s when pioneers like Thomas Cook and Cox & Kings pioneered the concept of organized group tours and package holidays. Thomas Cook's inaugural rail excursion in 1841 marked the beginning of mass tourism, laying the groundwork for the travel industry's expansion.
 
@@ -78,7 +78,7 @@ export default function Contact() {
                 <div className="contact_info">
 
                     <div className="">
-                        <GoogleMaps />
+                        <GoogleMaps/>
                         <p className='mt-5 mx-auto col-10 text-center'>We are located in the center of Tel Aviv Israel Contact phone: 03-5777777 Email: yshina100@gmail.com
                             You can also search on social networks available 24/7 if there is no answer please send your inquiry
                             and we will get
