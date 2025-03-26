@@ -9,6 +9,7 @@ export default function LogInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
+  const [loading, setLoading] = useState(false); // 👈 Add loading stat
 
   const { updateUser } = useContext(MyContext);
   const nav = useNavigate();
@@ -17,6 +18,7 @@ export default function LogInPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true); // 👈 Start loading
 
     try {
       // console.error(new Error("wrong"));
@@ -39,6 +41,9 @@ export default function LogInPage() {
     catch (err) {
       console.log(err);
       setErr("wrong email or password");
+
+      setLoading(false); // 👈 Stop loading
+
     }
   }
   return (
@@ -58,7 +63,9 @@ export default function LogInPage() {
           <label className='m-2' >password</label>
           <input className="form-control " type="password" id="password" value={password} onChange={(event) => setPassword(event.target.value)} />
 
-          <button className='btn btn-danger m-2' type="submit">LogIn</button>
+          <button className='btn btn-danger m-2' type="submit" disabled={loading}>
+            {loading ? <span className="spinner-border spinner-border-sm"></span> : "Log In"}
+          </button>
           {err && <h3 className='text-danger'>{err}</h3>}
 
         </form>

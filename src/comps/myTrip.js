@@ -8,6 +8,7 @@ import CountryInfoDB from '../general_comps/countryInfoDB';
 import AddInfoUser from '../general_comps/addInfoUser';
 import { API_URL } from '../constant/urls';
 import { doApiGet } from '../services/apiServices';
+import { FavoriteButton } from '../general_comps/FavoriteButton';
 
 export default function MyTrip() {
   const nav = useNavigate()
@@ -42,7 +43,7 @@ export default function MyTrip() {
     getCountry();
     getDataTown()
   }, [params])
-// שימוש באיפי אי חיצוני מדינות ואנפיפורמציה עליהים 
+  // שימוש באיפי אי חיצוני מדינות ואנפיפורמציה עליהים 
   const getCountry = async () => {
     try {
       const { data } = await axios.get(`https://restcountries.com/v3.1/name/${Query}`);
@@ -84,23 +85,23 @@ export default function MyTrip() {
   // }
 
   return (
-    <div className='container-fluid m-0' style={{ backgroundColor: "#D2691E", minHeight: "100vh" }}>
+    <div className='container-fluid m-0' style={{ backgroundColor: "#dcdcdc", minHeight: "100vh" }}>
       <SelectCountry />
       {countryData && <>
         <div className='mt-3 col-12 col-md-6 mx-auto flex-lg-row flex-column text-sm-center text-lg-start d-flex justify-content-center gap-5'>
 
-          <div className='border border-1 rounded p-3'>
+          <div className='border border-dark border-1 rounded p-3'>
             <h2 className='mt-2'>
               Info About: {countryData.name.common}
             </h2>
             <h4>Country Flag</h4>
             <img className='col-12 ' src={countryData.flags.png} alt='dt' />
-            <h3>Population: {countryData.population}</h3>
+            <h3>Population: {countryData.population.toLocaleString()}</h3>
             <h4>Region: {countryData.region}</h4>
             <h4>Language: {Object.values(countryData.languages) + "  "}</h4>
             <h4>Coin: {Object.keys(countryData.currencies) + " " + Object.values(countryData.currencies)[0].symbol + " (" + Object.values(countryData.currencies)[0].name + ")"}</h4>
             <h4>Capital: {countryData.capital}</h4>
-           
+
             {/* שימוש בדאטה שלנו */}
             <div>
               <CountryInfoDB countryName={countryData.name.common} dataTown={dataTown} />
@@ -125,9 +126,11 @@ export default function MyTrip() {
                 <p>No shared borders</p>
               )}
             </div>
+            {/* <FavoriteButton /> */}
+            <FavoriteButton countryName={countryData.name.common} />
           </div>
           {/* שישמוש באיפיאי ערים ומזג אוויר  */}
-          <div className='border border-1 rounded p-3'>
+          <div className='border border-dark border-1 rounded p-3'>
             <WeatherComponent defaultCountry={params.get("name")} />
           </div>
 
@@ -136,7 +139,7 @@ export default function MyTrip() {
         {/* הפניה למפות מאיפיאי חיצוני אינפורמציה */}
         <div className='text-center mt-3 '>
           <h4>Maps</h4>
-          <iframe 
+          <iframe
             className='rounded col-lg-6 col-md-8 col-sm-10'
             title="Google Maps"
             width="100%"

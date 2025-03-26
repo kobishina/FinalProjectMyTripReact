@@ -3,7 +3,7 @@ import Select from "react-select";
 
 const WeatherComponent = ({ defaultCountry }) => {
     const [country, setCountry] = useState('');
-    const [city, setCity] = useState('');
+    const [city, setCity] = useState(null);
     const [weatherData, setWeatherData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [cities, setCities] = useState([]);
@@ -12,21 +12,18 @@ const WeatherComponent = ({ defaultCountry }) => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        // const urlParams = new URLSearchParams(window.location.search);
-        // const defaultCountry = urlParams.get('name');
-        console.log(defaultCountry);
         if (defaultCountry) {
             setCountry(defaultCountry);
             fetchWeatherData(defaultCountry);
             fetchCities(defaultCountry);
             fetchCountryInfo(defaultCountry);
-            setCity("");
+            setCity(null);
         }
     }, [defaultCountry]);
 
     useEffect(() => {
         if (city) {
-            fetchWeatherData(city);
+            fetchWeatherData(city.value);
         }
     }, [city]);
 
@@ -36,7 +33,7 @@ const WeatherComponent = ({ defaultCountry }) => {
             const data = await response.json();
             const countryData = data.data.find((item) => item.country === country);
             if (countryData) {
-                setCities(countryData.cities);
+                setCities(countryData.cities.map(city => ({ value: city, label: city })));
             }
         } catch (error) {
             console.error('Error fetching cities:', error);
@@ -55,13 +52,11 @@ const WeatherComponent = ({ defaultCountry }) => {
                 setError('');
             } else {
                 setWeatherData(null);
-                setError(`Weather information for ${_location} is not available. 
-                Showing information for ${country} instead.`);
+                setError(`Weather information for ${_location} is not available. Showing information for ${country} instead.`);
             }
         } catch (error) {
             console.error('Error fetching weather data:', error);
-            setError(`Weather information for ${_location} is not available. 
-            Showing information for ${country} instead.`);
+            setError(`Weather information for ${_location} is not available. Showing information for ${country} instead.`);
         }
         setLoading(false);
     };
@@ -78,15 +73,19 @@ const WeatherComponent = ({ defaultCountry }) => {
 
     return (
         <div>
-            <h2>Weather in {city ? `${city}, ${country}` : country}</h2>
-
+            <h2>Weather in {city ? `${city.label}, ${country}` : country}</h2>
             <div>
-                <select value={city} onChange={(e) => setCity(e.target.value)}>
-                    <option value="">{!city ? 'Select City' : city}</option>
-                    {cities.map((city) => (
-                        <option key={city} value={city}>{city}</option>
-                    ))}
-                </select>
+                <Select
+                    options={cities}
+                    value={city}
+                    onChange={(selectedCity) => {
+                        setCity(selectedCity);
+                        fetchWeatherData(selectedCity.value);
+                    }}
+                    placeholder="Select City"
+                    isSearchable
+                    className="w-100"
+                />
             </div>
             {loading && <p>Loading...</p>}
             {error && <p>{error}</p>}

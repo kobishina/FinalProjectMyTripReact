@@ -22,6 +22,7 @@ import About from './comps/about';
 import Contact from './comps/contact';
 import Footer from './general_comps/footer';
 import useAOS from './hooks/useAOS';
+import Favorites, { FavoritesList } from './general_comps/favorites';
 
 export default function AppRoutes() {
   const { user } = useContext(MyContext)
@@ -36,15 +37,23 @@ export default function AppRoutes() {
         <Route path='/*' element={<Header type={"user"} />} />
       </Routes>
       <div style={{ minHeight: "100vh", marginTop: "-10px", overflow: "hidden", width: "100%" }}>
+
         <Routes>
           <Route path='/' element={<IndexComp />} />
           <Route path='/home' element={<HomePage />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
+
+          {/* <Route path='/favorites' element={<FavoritesList />} /> */}
+          <Route path="/favorites" element={<Favorites />} />
+
           {/* <Route path='/logIn' element={<LogInPage />} /> */}
           <Route path='/signUp' element={<SignUpPage />} />
           {
             user && <Route path='/myTrip' element={<MyTrip />} />
+
+            // <Route path='/favorites' element={<FavoritesList/>}/>
+
           }
 
           <Route path='/upload' element={<UploadFile />} />

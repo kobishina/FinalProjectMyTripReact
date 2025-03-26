@@ -38,20 +38,21 @@ header ul a {
     box-shadow: 5px 5px 15px -4px #000000; */
     -webkit-box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 15px -4px rgba(0, 0, 0, 0);
     box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 15px -4px rgba(0, 0, 0, 0);
-    background-color: aqua;
+    background-color: white;
+    /* #b2ebf2 */
 }
 
 .bg_home {
-    background-color: rgb(99, 121, 121);
+    background-color: #dcdcdc;
 }
 
-.bg_global{
+.bg_global {
     background-Color: "#380835"
 }
 
 body {
-    background-color: rgb(113, 113, 119);
-  }
+    background-color: #dcdcdc;
+}
 
 .box_select {
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00, 2px 2px 2px rgba(206, 89, 55, 0);
@@ -73,12 +74,12 @@ main {
 
 main .row h4 {
     font-size: 2em;
-    color: rgb(5, 240, 138);
+    color: black;
     margin: 10px 0;
 }
 
 main .accordion-item button {
-    background: gray;
+    background: white;
 }
 
 /* main .accordion-collapse {
@@ -98,7 +99,7 @@ article {
 
 article .directors {
 
-    color: rgb(5, 240, 138);
+    color: black;
     /* display: flex;
     align-items: center;
     justify-content: center; */
@@ -132,7 +133,7 @@ aside {
 }
 
 aside h4 {
-    color: rgb(5, 240, 138);
+    color: black;
     text-align: center;
     font-size: 2em;
     font-weight: 600px;
@@ -140,7 +141,7 @@ aside h4 {
 }
 
 aside .contact_info {
-    color: rgb(5, 240, 138);
+    color: black;
     /* max-width: 100%; */
     display: flex;
     align-items: center;
@@ -207,9 +208,11 @@ main .history .p_history {
     column-count: 3;
     column-gap: 50px;
     padding: 5px;
-    -webkit-box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-    box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-    color: white;
+    border-style: double;
+
+    /* -webkit-box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, 5px 5px 15px 5px rgba(0, 0, 0, 0); */
+    /* box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, 5px 5px 15px 5px rgba(0, 0, 0, 0); */
+    color: black;
 }
 
 @media (max-width:720px) {

@@ -20,7 +20,7 @@ export default function About() {
                         <div className="accordion text-center col-md-6 col-lg-8 shadow accordion-flush p-3 rounded-5 " id="accordionFlushExample">
 
                             {/* <!-- end accordion 1 --> */}
-                            <div className="accordion-item rounded-5 bg-warning">
+                            <div className="accordion-item rounded-5  ">
                                 <h2 className="accordion-header rounded-5 " id="flush-headingOne">
                                     <button className="accordion-button collapsed  rounded-5 m-1" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
@@ -30,7 +30,7 @@ export default function About() {
                                 </h2>
                                 <div id="flush-collapseOne" className="accordion-collapse collapse "
                                     aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div className="accordion-body rounded-5 text-bg-warning">From the second a customer fills out a
+                                    <div className="accordion-body rounded-5 ">From the second a customer fills out a
                                         lead form
                                         or signs up for a product update email to when they make a purchase,
                                         sales teams are there every step of the way on the customer journey. Below are 18
@@ -41,7 +41,7 @@ export default function About() {
                                 </div>
                             </div>
                             {/* <!-- end accordion 2 --> */}
-                            <div className="accordion-item rounded-5 bg-warning">
+                            <div className="accordion-item rounded-5 ">
                                 <h2 className="accordion-header rounded-5 " id="flush-headingTwo">
                                     <button className="accordion-button rounded-5 collapsed m-1" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
@@ -51,7 +51,7 @@ export default function About() {
                                 </h2>
                                 <div id="flush-collapseTwo" className="accordion-collapse collapse"
                                     aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                    <div className="accordion-body rounded-5 text-bg-warning">Imagine Web Solution inputs your site
+                                    <div className="accordion-body rounded-5 ">Imagine Web Solution inputs your site
                                         with three
                                         different steps. First is the initial overall idea, which is followed
                                         by information and creativity. These important factors, when viewed all together, gives
@@ -66,7 +66,7 @@ export default function About() {
                                 </div>
                             </div>
                             {/* <!-- end accordion 3 --> */}
-                            <div className="accordion-item rounded-5 bg-warning">
+                            <div className="accordion-item rounded-5 ">
                                 <h2 className="accordion-header rounded-5 " id="flush-headingThree">
                                     <button className="accordion-button collapsed rounded-5 m-1" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
@@ -74,7 +74,7 @@ export default function About() {
                                         availability 24/7! Mean?
                                     </button>
                                 </h2>
-                                <div id="flush-collapseThree" className="accordion-collapse rounded-5 text-bg-warning collapse"
+                                <div id="flush-collapseThree" className="accordion-collapse rounded-5  collapse"
                                     aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                     <div className="accordion-body rounded-5 ">24x7 means "24 hours a day, 7 days a week" and is
                                         used to
@@ -87,7 +87,7 @@ export default function About() {
                                 </div>
                             </div>
                             {/* <!-- end accordion 4 --> */}
-                            <div className="accordion-item rounded-5 bg-warning">
+                            <div className="accordion-item rounded-5 ">
                                 <h2 className="accordion-header rounded-5" id="flush-headingFour">
                                     <button className="accordion-button collapsed  rounded-5 m-1" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
@@ -95,7 +95,7 @@ export default function About() {
                                         What will you fine with us?
                                     </button>
                                 </h2>
-                                <div id="flush-collapseFour" className="accordion-collapse text-bg-warning collapse rounded-5"
+                                <div id="flush-collapseFour" className="accordion-collapse  collapse rounded-5"
                                     aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                                     <div className="accordion-body rounded-5">Providing employee benefits can get expensive fast,
                                         but you can
@@ -108,7 +108,7 @@ export default function About() {
                                 </div>
                             </div>
                             {/* <!-- end accordion 5 --> */}
-                            <div className="accordion-item rounded-5 bg-warning">
+                            <div className="accordion-item rounded-5 ">
                                 <h2 className="accordion-header rounded-5" id="flush-headingFive">
                                     <button className="accordion-button collapsed rounded-5 m-1" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false"
@@ -116,7 +116,7 @@ export default function About() {
                                         Are you Bussines?
                                     </button>
                                 </h2>
-                                <div id="flush-collapseFive" className="rounded-5  accordion-collapse text-bg-warning collapse"
+                                <div id="flush-collapseFive" className="rounded-5  accordion-collapse  collapse"
                                     aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
                                     <div className="accordion-body rounded-5 ">people who run an owner-operated small business or
                                         those who own
@@ -136,7 +136,7 @@ export default function About() {
             </main>
             <article>
                 <div className="container ">
-                    <h3 className="text-center my-5" style={{ color: "rgb(5, 240, 138)" }}>Directors</h3>
+                    <h3 className="text-center my-5" style={{ color: "black" }}>Directors</h3>
                     <div className="directors d-flex justify-content-center align-items-center flex-column flex-md-row gap-3">
                         <div className="director_img">
                             <img data-aos="fade-left" data-img src={ronBeni} alt="ronBeni" />
