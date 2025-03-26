@@ -14,7 +14,7 @@ export default function MyCarousel() {
         <Carousel className='col-md-12 p-5 '>
             <Carousel.Item>
                 <img
-                    className="d-block w-100"
+                    className="d-block w-100 rounded-4"
                     src={homeImg}
                     alt="Europ slide"
                     style={{ width: '100%', height: '550px' }}
@@ -27,7 +27,7 @@ export default function MyCarousel() {
 
             <Carousel.Item>
                 <img
-                    className="d-block w-100"
+                    className="d-block w-100 rounded-4"
                     src={europeImg}
                     alt="Europ slide"
                     style={{ width: '100%', height: '550px' }}
@@ -40,7 +40,7 @@ export default function MyCarousel() {
 
             <Carousel.Item>
                 <img
-                    className="d-block w-100"
+                    className="d-block w-100 rounded-4"
                     src={asiaImg}
                     alt="Asia slide"
                     style={{ width: '100%', height: '550px' }}
@@ -54,7 +54,7 @@ export default function MyCarousel() {
 
             <Carousel.Item>
                 <img
-                    className="d-block w-100"
+                    className="d-block w-100 rounded-4"
                     src={americaImg}
                     alt="America slide"
                     style={{ width: '100%', height: '550px' }}
@@ -68,7 +68,7 @@ export default function MyCarousel() {
 
             <Carousel.Item>
                 <img
-                    className="d-block w-100"
+                    className="d-block w-100 rounded-4"
                     src={africaImg}
                     alt="Africa slide"
                     style={{ width: '100%', height: '550px' }}
