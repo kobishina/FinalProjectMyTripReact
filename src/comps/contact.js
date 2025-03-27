@@ -10,6 +10,7 @@ import umbrella from "../img/places/umbrellaView.jpg";
 import GoogleMaps from '../general_comps/googleMaps';
 import ReadMore from '../general_comps/readMore';
 import LightBox from '../general_comps/lightBox';
+import ContactPopup from '../general_comps/whatsappMsgPopUp';
 
 export default function Contact() {
     return (
@@ -71,14 +72,14 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
-
+                <div> <ContactPopup /></div>
             </div>
             <aside className="container">
                 <h4>Our Location in Google maps</h4>
                 <div className="contact_info">
 
                     <div className="">
-                        <GoogleMaps/>
+                        <GoogleMaps />
                         <p className='mt-5 mx-auto col-10 text-center'>We are located in the center of Tel Aviv Israel Contact phone: 03-5777777 Email: yshina100@gmail.com
                             You can also search on social networks available 24/7 if there is no answer please send your inquiry
                             and we will get

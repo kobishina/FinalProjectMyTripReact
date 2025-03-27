@@ -63,6 +63,7 @@ export default function HomePage() {
                 <h1 className="fs-1 fst-italic m-0 pt-2 py-2 h1Fount ">wellcome to your trip today </h1>
             </div>
             <MyCarousel />
+
             <div className='container pb-5 pt-5'>
                 <div className='row py-3 '>
 

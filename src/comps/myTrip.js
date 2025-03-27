@@ -9,6 +9,7 @@ import AddInfoUser from '../general_comps/addInfoUser';
 import { API_URL } from '../constant/urls';
 import { doApiGet } from '../services/apiServices';
 import { FavoriteButton } from '../general_comps/FavoriteButton';
+import ContactPopup from '../general_comps/whatsappMsgPopUp';
 
 export default function MyTrip() {
   const nav = useNavigate()
@@ -85,7 +86,9 @@ export default function MyTrip() {
   // }
 
   return (
+
     <div className='container-fluid m-0' style={{ backgroundColor: "#dcdcdc", minHeight: "100vh" }}>
+
       <SelectCountry />
       {countryData && <>
         <div className='mt-3 col-12 col-md-6 mx-auto flex-lg-row flex-column text-sm-center text-lg-start d-flex justify-content-center gap-5'>

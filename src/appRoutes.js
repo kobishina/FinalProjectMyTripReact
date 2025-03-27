@@ -23,6 +23,7 @@ import Contact from './comps/contact';
 import Footer from './general_comps/footer';
 import useAOS from './hooks/useAOS';
 import Favorites, { FavoritesList } from './general_comps/favorites';
+import ScrollWrapper from './general_comps/scrollWarper';
 
 export default function AppRoutes() {
   const { user } = useContext(MyContext)
@@ -32,11 +33,14 @@ export default function AppRoutes() {
 
   return (
     <BrowserRouter>
+
       <Routes>
         <Route path='/admin/*' element={<Header type={"admin"} />} />
         <Route path='/*' element={<Header type={"user"} />} />
       </Routes>
+
       <div style={{ minHeight: "100vh", marginTop: "-10px", overflow: "hidden", width: "100%" }}>
+
 
         <Routes>
           <Route path='/' element={<IndexComp />} />
@@ -76,7 +80,6 @@ export default function AppRoutes() {
 
         </Routes>
       </div>
-
 
       <Routes>
         <Route path='/*' element={<Footer />} />
