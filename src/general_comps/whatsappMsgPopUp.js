@@ -96,7 +96,7 @@ const styles = {
         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
         borderRadius: "10px",
         padding: "40px",
-        maxWidth: "800px",
+        maxWidth: "1200px",
         width: "100%",
         margin: "50px auto",
         border: "1px solid #ddd",
