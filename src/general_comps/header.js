@@ -43,7 +43,7 @@ export default function Header({ type }) {
               {user ?
                 <>
                   <li className='li_links'><Link to="/home">Home</Link></li>
-                  <li className='li_links'><Link to="/myTrip">My Trip</Link></li>
+                  <li className='li_links'><Link to="/myTrip">My Journy</Link></li>
                   <li className='li_links'><Link to="/about">About Us & FAQ</Link></li>
                   <li className='li_links'><Link to="/contact">Contact Us & Gallery</Link></li>
                   <li className='li_links'><Link to="/favorites">Favorites ⭐</Link></li>

@@ -216,6 +216,11 @@ main .history .p_history {
     color: black;
 }
 
+section a {
+    color: #370f3f;
+
+}
+
 @media (max-width:720px) {
     main .history .p_history {
         column-count: 2;

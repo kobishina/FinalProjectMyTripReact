@@ -10,6 +10,9 @@ import { API_URL } from '../constant/urls';
 import { doApiGet } from '../services/apiServices';
 import { FavoriteButton } from '../general_comps/FavoriteButton';
 import ContactPopup from '../general_comps/whatsappMsgPopUp';
+import USADetails from '../general_comps/usaDetails';
+import IsraelDetails from '../general_comps/israelDetails';
+import VietnamDetails from '../general_comps/vietnamDetails';
 
 export default function MyTrip() {
   const nav = useNavigate()
@@ -152,6 +155,14 @@ export default function MyTrip() {
             src={`https://maps.google.com/maps?q=${countryData.latlng[0]},${countryData.latlng[1]}&z=5&ie=UTF8&iwloc=&output=embed`}
           ></iframe>
 
+
+          {/* נצגת מידע על ארה"ב בתנאי שנבחר המדינה */}
+          <div>
+            {Query === "United States" && <USADetails />}
+            {Query === "Israel" && <IsraelDetails />}
+            {Query === "Vietnam" && <VietnamDetails />}
+          </div>
+
           <AddInfoUser sParams={params} defaultCountry={params.get("name")} dataTown={dataTown} getDataTown={getDataTown} />
         </div>
       </>}
@@ -159,6 +170,7 @@ export default function MyTrip() {
       <div className=''>
         <TravelList />
       </div>
+
     </div >
     //info from the api about the country and connect to DB info about bit chabad
     // place to put some note about the trip will save at local storage
